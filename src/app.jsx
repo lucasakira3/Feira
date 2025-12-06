@@ -10,7 +10,7 @@ import Produtos from "./Pages/Produtos.jsx";
 import Login from "./Pages/Login.jsx";
 import Index from "./Pages/Index.jsx";
 import Sobrenos from "./Pages/sobrenos.jsx";
-import Cadastro from "./Pages/Cadastro.jsx";
+import Cadastro from "./Pages/cadastro.jsx";
 import Faleconosco from "./Pages/FaleConosco.jsx";
 import Entrar from "./Pages/Entrar.jsx";
 import Carrinho from "./Pages/Carrinho.jsx";
