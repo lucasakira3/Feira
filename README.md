@@ -1,12 +1,33 @@
-# React + Vite
+Feira
+Este projeto é uma plataforma de comércio de produtos naturais, utilizando de smart contracts da blockchain
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Estrutura do Projeto
+/pages: Contém as páginas do projeto, como home, produtos, rastreamento, login, cadastro etc...
+/css: Estilização das páginas do projeto
+/data: arquivos javascript de mock
+/components: header, sidebar e timeline.jsx
 
-Currently, two official plugins are available:
+Como Executar
+Faça o dowload ou clone desse repositório
+Abra a pasta OTIS e rode o comando NPM install
+Após isso, NPM RUN DEV
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Funcionalidades
+Home Inicial
+Cadastro e Login de usuários
+Sistema de check-in e check-out de vendas
+Filtro de produtos
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tecnologias Utilizadas
+HTML5
+CSS3 (Bootstrap e estilos próprios)
+JavaScript
+React
+
+Desenvolvido por
+Fabrício Alves Magoga
+Pedro Dalmas Batista e Souza
+Lucas Akira Teruya
+João Pedro Benedet
+Alan Carlos Bernardes de Lima
