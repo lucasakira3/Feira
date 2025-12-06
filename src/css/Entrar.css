@@ -1,0 +1,424 @@
+.entrar-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.entrar-container::before {
+    content: "";
+    width: 80vw;
+    height: 80vw;
+    z-index: 1;
+    position: absolute;
+    background-color: #e8f5e8;
+    border-radius: 0 100% 100%;
+    left: -15%;
+    bottom: 10;
+}
+
+.entrar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.entrar-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entrar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.entrar-logo svg {
+    max-width: 100%;
+    position: relative;
+    z-index: 3;
+    filter: drop-shadow(0 4px 8px rgba(26, 95, 60, 0.2));
+}
+
+/* Frutas e verduras espalhadas */
+.food-items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.food-item {
+    position: absolute;
+    opacity: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    animation: rotate 14s linear infinite;
+    transform: scale(1.2);
+}
+
+.food-item:nth-child(1) { /* Maçã - 12h */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(30deg) translate(0px, -200px) rotate(-30deg) scale(1.2);
+    animation-delay: 0s;
+}
+
+.food-item:nth-child(2) { /* Banana - 1h30 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(75deg) translate(95px, -142px) rotate(-75deg) scale(1.2);
+    animation-delay: 0s;
+}
+
+.food-item:nth-child(3) { /* Tomate - 3h */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(120deg) translate(140px, -70px) rotate(-120deg) scale(1.2);
+    animation-delay: 0s;
+}
+
+.food-item:nth-child(4) { /* Cenoura - 4h30 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(165deg) translate(95px, 142px) rotate(-165deg) scale(1.2);
+    animation-delay: 0s;
+}
+
+.food-item:nth-child(5) { /* Alface - 6h */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(210deg) translate(0px, 200px) rotate(-210deg) scale(1.2);
+    animation-delay: 0s;
+}
+
+.food-item:nth-child(6) { /* Uva - 7h30 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(255deg) translate(-95px, 142px) rotate(-255deg) scale(1.2);
+    animation-delay: 0s;
+}
+
+.food-item:nth-child(7) { /* Limão - 9h */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(300deg) translate(-140px, -70px) rotate(-300deg) scale(1.2);
+    animation-delay: 0s;
+}
+
+.food-item:nth-child(8) { /* Brócolis - 10h30 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(345deg) translate(-95px, -142px) rotate(-345deg) scale(1.2);
+    animation-delay: 0s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(30deg) translate(0px, -200px) rotate(-30deg) scale(1.2);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(120deg) translate(140px, -70px) rotate(-120deg) scale(1.2);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(210deg) translate(0px, 200px) rotate(-210deg) scale(1.2);
+    }
+    75% {
+        transform: translate(-50%, -50%) rotate(300deg) translate(-140px, -70px) rotate(-300deg) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(390deg) translate(0px, -200px) rotate(-390deg) scale(1.2);
+    }
+}
+
+.entrar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.entrar-card {
+    width: 510px;
+    height: 350px;
+    border-radius: 8px;
+    padding: 36px 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 4;
+    overflow: hidden; /* impedir que o conteúdo aumente o card */
+}
+
+.entrar-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+}
+
+.entrar-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin: 0 0 32px 0;
+    font-weight: 400;
+}
+
+.entrar-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.2s ease;
+}
+
+.google-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #d0d0d0;
+}
+
+.google-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.entrar-options {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.option-btn {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #d0d0d0;
+}
+
+/* Quando o usuário escolhe Celular ou E-mail: */
+.option-input-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 8px;
+    background: linear-gradient(180deg, #ffffff, #fbfff9);
+    border-radius: 8px;
+}
+
+/* Quando o card inteiro é substituído */
+.option-input-card.full-card {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 160px;
+}
+
+.entrar-card > .back-btn {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    z-index: 6;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.entrar-card > .back-btn:hover {
+    background: rgba(0,0,0,0.03);
+}
+
+.entrar-card .full-card .input-wrap {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+}
+
+.entrar-card .full-card .input-label {
+    text-align: left;
+    margin-top: 6px;
+}
+
+.back-btn {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background: rgba(0,0,0,0.03);
+}
+
+.input-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-label {
+    font-size: 13px;
+    color: #444;
+    text-align: left;
+}
+
+.option-input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    font-size: 15px;
+    outline: none;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.option-input:focus {
+    border-color: #7fb77e;
+    box-shadow: 0 0 0 4px rgba(127,183,126,0.12);
+}
+
+/* Estilos para o conteúdo substituído (conforme anexo, cores do site) */
+.input-title {
+    font-size: 20px;
+    color: #4b4b4b;
+    font-weight: 500;
+    text-align: center;
+    margin: 8px 0 10px 0;
+}
+
+.helper-text {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.4;
+    margin: 8px 0 18px 0;
+    text-align: left;
+}
+
+.primary-btn {
+    width: 100%;
+    max-width: 420px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: none;
+    background-color: #27ae60; /* cor verde do projeto */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(39,174,96,0.12);
+    transition: background-color 0.15s ease, transform 0.06s ease;
+}
+
+.primary-btn:hover {
+    background-color: #219150;
+}
+
+.primary-btn:active {
+    transform: translateY(1px);
+}
+
+/* Ajustes para o input dentro do card */
+.option-input-card.full-card .option-input {
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .entrar-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .entrar-left {
+        display: none;
+    }
+    
+    .entrar-card {
+        width: 100%;
+        max-width: 400px;
+        padding: 24px 32px;
+    }
+    
+    .entrar-title {
+        font-size: 24px;
+    }
+    
+    .entrar-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+  .authentication__illustration:before {
+      right: 0;
+      bottom: unset;
+      left: auto;
+      min-width: 130vh;
+      min-height: 135vh;
+      max-width: 80vw;
+      max-height: 80vw;
+      width: 80vw;
+      height: 80vw;
+      transform: translate(15vw, -23%);
+  }
+}
